@@ -17,7 +17,7 @@ AdminScripts:NewDropdown("Admin Scripts", "Contains a selection of admin scripts
     end
 end)
 
-YBAGUISECTION:NewDropdown("Character Scripts", "Applies stuff to your character only", {"Noclip", "Infinite Jump"}, function(currentOption)
+Charactersection:NewDropdown("Character Scripts", "Applies stuff to your character only", {"Noclip", "Infinite Jump"}, function(currentOption)
     if currentOption == "Infinite Jump" then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/vmda/infjump/main/infjumpagain "))()
     elseif currentOption == "Noclip" then
