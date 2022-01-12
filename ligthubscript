@@ -1,5 +1,8 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("ligthub", "DarkTheme")
+
+
+-- MAIN
 local Main = Window:NewTab("Main")
 local AdminScripts = Main:NewSection("Admin")
 AdminScripts:NewDropdown("Admin Scripts", "Contains a selection of admin scripts (will update)", {"Infinite Yield", "CMD-X"}, function(currentOption)
@@ -9,4 +12,18 @@ AdminScripts:NewDropdown("Admin Scripts", "Contains a selection of admin scripts
         loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))()
     end
 end)
+
+
+-- YBA
+if game.PlaceID == 2809202155 then
+    local YBA = Main:NewTab("YBA")
+    local YBA GUIS = Main:NewSection("YBA GUIS")
+    AdminScripts:NewDropdown("YBA Guis", "Contains a selection of yba guis scripts (will update)", {"Xenon", "Midnight GUI"}, function(currentOption)
+        if currentOption == "Xenon" then
+            loadstring(game:HttpGet('https://pastebin.com/raw/HkkYyMP6'))()
+        elseif currentOption == "Midnight GUI" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/MidnightKittenCat/script-idk/main/YBA.lua"))() 
+        end
+    end)
+end
 
