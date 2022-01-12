@@ -1,10 +1,9 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("ligthub", "DarkTheme")
-
-
--- MAIN
 local Main = Window:NewTab("Main")
 local AdminScripts = Main:NewSection("Admin")
+local YBA = Window:NewTab("YBA")
+local YBAGUISECTION = YBA:NewSection("YBA GUIS")
 AdminScripts:NewDropdown("Admin Scripts", "Contains a selection of admin scripts (will update)", {"Infinite Yield", "CMD-X"}, function(currentOption)
     if currentOption == "Infinite Yield" then
         loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
@@ -13,17 +12,13 @@ AdminScripts:NewDropdown("Admin Scripts", "Contains a selection of admin scripts
     end
 end)
 
-
 -- YBA
-if game.PlaceID == 2809202155 then
-    local YBA = Main:NewTab("YBA")
-    local YBAGUIS = Main:NewSection("YBA GUIS")
-    YBAGUIS:NewDropdown("YBA Guis", "Contains a selection of yba guis scripts (will update)", {"Xenon", "Midnight GUI"}, function(currentOption)
-        if currentOption == "Xenon" then
-            loadstring(game:HttpGet('https://pastebin.com/raw/HkkYyMP6'))()
-        elseif currentOption == "Midnight GUI" then
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/MidnightKittenCat/script-idk/main/YBA.lua"))() 
-        end
-    end)
-end
 
+YBAGUISECTION:NewDropdown("YBA TAB", "Only works in Your Bizarre Adventure", {"YBA", "MidnightGUI"}, function(currentOption)
+    if currentOption == "YBA" then
+        getgenv().Key = "HelloEpicGUI"
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SupBabe/YBAHOPPER/main/YBAv2.lua"))()
+    elseif currentOption == "Midnight GUI" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/MidnightKittenCat/script-idk/main/YBA.lua"))()    
+    end
+end)
