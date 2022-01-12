@@ -1,0 +1,12 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("ligthub", "DarkTheme")
+local Main = Window:NewTab("Main")
+local AdminScripts = Main:NewSection("Admin")
+AdminScripts:NewDropdown("Admin Scripts", "Contains a selection of admin scripts (will update)", {"Infinite Yield", "CMD-X"}, function(currentOption)
+    if currentOption == "Infinite Yield" then
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    elseif currentOption == "CMD-X" then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))()
+    end
+end)
+
