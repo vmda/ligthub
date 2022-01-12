@@ -17,8 +17,8 @@ end)
 -- YBA
 if game.PlaceID == 2809202155 then
     local YBA = Main:NewTab("YBA")
-    local YBA GUIS = Main:NewSection("YBA GUIS")
-    AdminScripts:NewDropdown("YBA Guis", "Contains a selection of yba guis scripts (will update)", {"Xenon", "Midnight GUI"}, function(currentOption)
+    local YBAGUIS = Main:NewSection("YBA GUIS")
+    YBAGUIS:NewDropdown("YBA Guis", "Contains a selection of yba guis scripts (will update)", {"Xenon", "Midnight GUI"}, function(currentOption)
         if currentOption == "Xenon" then
             loadstring(game:HttpGet('https://pastebin.com/raw/HkkYyMP6'))()
         elseif currentOption == "Midnight GUI" then
